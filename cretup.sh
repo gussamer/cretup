@@ -10,4 +10,4 @@ crew install cmatrix
 crew install curl
 crew install gnupg
 cd ~/Downloads/
-wget -q -O - https://goo.gl/fd3zc | crouton
+wget -q -O ~/Downloads/crouton https://goo.gl/fd3zc
