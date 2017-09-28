@@ -14,7 +14,4 @@ vim +PlugInstall +qall &
 wait
 curl 'https://goo.gl/fd3zc' > ~/Downloads/crouton &
 wait
-sudo chromeos-setdevpasswd &
-wait
-echo "sudo sh -e ~/Downloads/crouton -e -n kali -p /media/removeable/k/ -r kali-rolling -t audio,cli-extra,core,extension,xfce"
 cmatrix
