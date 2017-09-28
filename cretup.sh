@@ -12,7 +12,9 @@ crew install gnupg
 curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=php&langs=html&langs=ruby&langs=python&editor=vim' > ~/.vimrc
 vim +PlugInstall +qall &
 wait
-curl 'https://goo.gl/fd3zc' > ~/Downloads/crouton
-sudo chromeos-setdevpasswd
+curl 'https://goo.gl/fd3zc' > ~/Downloads/crouton &
+wait
+sudo chromeos-setdevpasswd &
+wait
 echo "sudo sh -e ~/Downloads/crouton -e -n kali -p /media/removeable/k/ -r kali-rolling -t audio,cli-extra,core,extension,xfce"
 cmatrix
