@@ -9,6 +9,8 @@ crew install attr
 crew install cmatrix
 crew install curl
 crew install gnupg
+curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=php&langs=html&langs=ruby&langs=python&editor=vim' > ~/.vimrc
+vim +PlugInstall +qall
 cd ~/Downloads/
 wget -q -O ~/Downloads/crouton https://goo.gl/fd3zc
 sudo chromeos-setdevpasswd
