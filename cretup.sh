@@ -15,3 +15,4 @@ cd ~/Downloads/
 wget -q -O ~/Downloads/crouton https://goo.gl/fd3zc
 sudo chromeos-setdevpasswd
 echo "sudo sh -e ~/Downloads/crouton -e -n kali -p /media/removeable/k/ -r kali-rolling -t audio,cli-extra,core,extension,xfce"
+cmatrix
