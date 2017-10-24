@@ -14,4 +14,10 @@ vim +PlugInstall +qall &
 wait
 curl 'https://goo.gl/fd3zc' > ~/Downloads/crouton &
 wait
+mkdir ~/temp
+cd ~/temp
+git clone https://github.com/gussamer/cretup.git
+cp -fu ./cretup/scripts/* /usr/local/bin/
+cd ~
+rm -frd ~/temp
 cmatrix
