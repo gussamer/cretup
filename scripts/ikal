@@ -1,0 +1,2 @@
+#!/bin/sh -e
+sudo sh -e ~/Downloads/crouton -e -n kali -p /media/removeable/k/ -r kali-rolling -t audio,cli-extra,core,extension
