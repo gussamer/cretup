@@ -12,7 +12,7 @@ crew install gnupg
 curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=javascript&langs=php&langs=html&langs=ruby&langs=python&editor=vim' > ~/.vimrc
 vim +PlugInstall +qall &
 wait
-curl 'https://goo.gl/fd3zc' > ~/Downloads/crouton &
+wget -q -O - https://raw.github.com/dnschneid/crouton/master/installer/crouton > ~/Downloads/crouton &
 wait
 mkdir ~/temp
 cd ~/temp
