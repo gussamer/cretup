@@ -1,0 +1,2 @@
+#!/bin/sh -e
+startxfce4 -c /media/removable/k/chroots/
