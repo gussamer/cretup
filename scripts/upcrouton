@@ -2,5 +2,5 @@
 wget -q -O - https://raw.github.com/dnschneid/crouton/master/installer/crouton > /tmp/crouton &
 wait
 chmod +x /tmp/crouton
-mv /tmp/crouton /usr/local/bin/
+sudo mv /tmp/crouton /usr/local/bin/
 

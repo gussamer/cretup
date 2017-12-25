@@ -1,2 +1,2 @@
 #!/bin/sh -e
-startgnome -c /media/removable/k/chroots/ -n ubu
+sudo startgnome -c /media/removable/k/chroots/ -n ubu
