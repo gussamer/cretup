@@ -1,2 +1,6 @@
 #!/bin/sh -e
-wget -q -O - https://raw.github.com/dnschneid/crouton/master/installer/crouton > ~/Downloads/crouton
+wget -q -O - https://raw.github.com/dnschneid/crouton/master/installer/crouton > /tmp/crouton &
+wait
+chmod +x /tmp/crouton
+mv /tmp/crouton /usr/local/bin/
+
