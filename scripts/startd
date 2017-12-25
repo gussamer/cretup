@@ -1,2 +1,2 @@
 #!/bin/sh -e
-startxfce4 -c /media/removable/k/chroots/
+startgnome -c /media/removable/k/chroots/ -n deg

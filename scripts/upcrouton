@@ -1,0 +1,2 @@
+#!/bin/sh -e
+wget -q -O - https://raw.github.com/dnschneid/crouton/master/installer/crouton > ~/Downloads/crouton
