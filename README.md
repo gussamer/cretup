@@ -2,9 +2,9 @@
 
 ## Chrome OS Setup
 
-A script I use to setup my chromebook dev machine after a powerwash.
-Chromebook must be in developer mode.
-The crouton related scripts only work on intel based chromebooks.
+- A script I use to setup my chromebook dev machine after a powerwash.
+- Chromebook must be in developer mode.
+- The crouton related scripts only work on intel based chromebooks.
 
 ## Usage
 
@@ -14,7 +14,7 @@ wget -q -O - https://raw.github.com/gussamer/cretup/master/cretup.sh | bash
 
 ## Scripts
 
-* requires root privileges
+*requires root privileges
 
 - fcard: fixes sd card being mounted as read only*
 - ikal: install a basic kali chroot with no gui*
