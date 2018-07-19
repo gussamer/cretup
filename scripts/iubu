@@ -1,2 +1,0 @@
-#!/bin/sh -e
-sudo sh -e ~/Downloads/crouton -e -n ubu -p /media/removeable/k/ -r trusty -t audio,cli-extra,core,extension,unity

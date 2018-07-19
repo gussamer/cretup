@@ -1,0 +1,27 @@
+#!/bin/sh -e
+location=$1
+if [ "$location" = ""] || [ ! -d "$location" ]; then
+    read -p "[?] Please specify a location to install ubuntu chroot: " loc
+    if [ "$location" = "" ] || [ ! -d "$location" ]; then
+        echo "[*] Cannot continue with bad location: $location"
+        exit 1
+    fi
+fi
+version=$2
+if [ "$version" != "14" ] && [ "$version" != "16" ]; then
+    read -p "[?] Please specify the version of ubuntu: (14 = Trusty Tahr 14.04) or (16 = Xenial Xerus 16.04)"
+    if [ "$version" != "14" ] && [ "$version" != "16" ]; then
+        echo "[!] Unknown version specified: $version"
+        exit 1
+    fi
+    if [ "$version" = "16" ]; then
+        version="xenial"
+    else
+        version="trusty"
+    fi
+fi
+sudo crouton -e -n ubuntu -p $location -r $version -t audio,cli-extra,core,extension,x11,gtk-extra,chrome,unity && {
+    chstartgen ubuntu $location startunity && {
+        chupdategen ubuntu $loc $version audio,cli-extra,core,extension,x11,gtk-extra,chrome,unity
+    }
+}

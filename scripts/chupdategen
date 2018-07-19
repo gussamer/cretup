@@ -1,0 +1,31 @@
+#!/bin/sh -e
+name=$1
+if [ "$name" = "" ]; then
+    echo "[*] Cannot continue without a name specified!"
+    exit 1
+fi
+location=$2
+if [ "$location" = "" ]; then
+    echo "[*] Cannot continue without a location specified!"
+    exit 1
+fi
+release=$3
+if [ "$release" = "" ]; then
+    echo "[*] Cannot continue without a release specified!"
+    exit 1
+fi
+targets=$4
+if [ "$targets" = "" ]; then
+    echo "[*] Cannot continue without targets specified!"
+    exit 1
+fi
+if [ -f "/usr/local/bin/update$name" ]; then
+    read -p "[?] update$name already exists, overwrite it?(yes): " over
+    if [ "$over" != "yes" ]; then
+        echo "[!] Cannot continue without overwriting, exiting..."
+        exit 1
+    fi
+fi
+sudo echo "#!/bin/sh -e\nsudo crouton -e -n $name -p $location -r $release -t $targets -u" > /usr/local/bin/update$name
+sudo chmod +x /usr/local/bin/update$name
+echo "[+] You can update your new chroot by running: update$name"

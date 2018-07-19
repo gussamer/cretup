@@ -1,2 +1,0 @@
-#!/bin/sh -e
-sudo enter-chroot -c /media/removable/k/chroots/ -n kali

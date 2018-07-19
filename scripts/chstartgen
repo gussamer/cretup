@@ -1,0 +1,26 @@
+#!/bin/sh -e
+name=$1
+if [ "$name" = "" ]; then
+    echo "[*] Cannot continue without a name specified!"
+    exit 1
+fi
+location=$2
+if [ "$location" = "" ]; then
+    echo "[*] Cannot continue without a location specified!"
+    exit 1
+fi
+enter=$3
+if [ "$enter" = "" ]; then
+    echo "[*] Cannot continue without a enter command specified!"
+    exit 1
+fi
+if [ -f "/usr/local/bin/start$name" ]; then
+    read -p "[?] start$name already exists, overwrite it?(yes): " over
+    if [ "$over" != "yes" ]; then
+        echo "[!] Cannot continue without overwriting, exiting..."
+        exit 1
+    fi
+fi
+sudo printf "#!/bin/sh -e\nsudo $enter -c $location/chroots -n $name\n" > /usr/local/bin/start$name
+sudo chmod +x /usr/local/bin/start$name
+echo "[+] You can enter your new chroot by running: start$name"

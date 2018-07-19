@@ -1,0 +1,13 @@
+#!/bin/sh -e
+loc=$1
+if [ "$loc" = ""]; then
+    read -p "[?] Please specify a location to install the kali chroot: " loc
+    if [ "$loc" = "" ] || [ ! -d "$loc" ]; then
+        echo "[*] Cannot continue with bad location: $loc"
+    fi
+fi
+sudo crouton -e -n kali -p $loc -r kali-rolling -t audio,cli-extra,core,extension,x11,xorg && {
+    chstartgen kali $loc enter-chroot && {
+        chupdategen kali $loc kali-rolling audio,cli-extra,core,extension,x11,xorg
+    }
+}
