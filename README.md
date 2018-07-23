@@ -20,10 +20,8 @@ wget -q -O - https://raw.github.com/gussamer/cretup/master/cretup.sh | bash
 - chupdategen: generates a chroot update script to be added to path
 - fcard: fixes sd card being mounted as read only*
 - installkali: install a basic kali chroot with no gui*
-- installubuntu: install a ubuntu chroot with unity*
--- use my sfetup script to setup ubuntu for salesforce development
-- installvscode: install a basic ubuntu meant to run vscode
--- under development
-- la: ls -a 
+- installubuntu: install a ubuntu chroot with unity* (use my sfetup script to setup ubuntu for salesforce development)
+- installvscode: install a basic ubuntu meant to run vscode (under development)
+- la: ls -a
 - ll: ll -l
 - upcrouton: updates the crouton script to latest version
