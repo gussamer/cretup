@@ -16,12 +16,14 @@ wget -q -O - https://raw.github.com/gussamer/cretup/master/cretup.sh | bash
 
 *requires root privileges
 
+- chstartgen: generates a chroot start script to be added to path
+- chupdategen: generates a chroot update script to be added to path
 - fcard: fixes sd card being mounted as read only*
-- ikal: install a basic kali chroot with no gui*
-- iubu: install a ubuntu chroot with unity*
---use my sfetup script to setup ubuntu for salesforce development 
-- la: ls -a
+- installkali: install a basic kali chroot with no gui*
+- installubuntu: install a ubuntu chroot with unity*
+-- use my sfetup script to setup ubuntu for salesforce development
+- installvscode: install a basic ubuntu meant to run vscode
+-- under development
+- la: ls -a 
 - ll: ll -l
-- startk: starts the kali chroot created by ikal*
-- startu: starts the ubunutu chroot created by iubu*
 - upcrouton: updates the crouton script to latest version
